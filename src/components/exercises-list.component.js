@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Exercise = props => (
+  return (
   <tr>
     <td>{props.exercise.username}</td>
     <td>{props.exercise.description}</td>
@@ -12,6 +13,7 @@ const Exercise = props => (
       <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
     </td>
   </tr>
+  )
 )
 
 export default class ExercisesList extends Component {
